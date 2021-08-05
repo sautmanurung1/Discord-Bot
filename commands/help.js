@@ -18,6 +18,7 @@ module.exports = {
             .addField('checkAdmin', 'Command untuk mengecek apa kalian admin atau bukan')
             .addField('kick', 'Command untuk mengkick user lain jika kalian itu seorang admin')
             .addField('ban', 'Command untuk membanned user lain jika kalian seorang admin')
+            .addField('Promo', 'Command untuk menjalankan sebuah promo')
             .setColor('05dfd7')
             .setFooter(botinfo.bot_name+ ' ' + botinfo.version);
             msg.channel.send(helpembed);
