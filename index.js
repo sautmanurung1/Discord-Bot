@@ -1,8 +1,6 @@
-const Discord = require('discord.js');
-const { Client, Collection } = require('discord.js');
+const { Client , Collection } = require('discord.js');
 const client = new Client();
-
-
+const Discord = require('discord.js')
 const PREFIX = '!';
 const fs = require ('fs');
 const { CanvasSenpai } = require('canvas-senpai')
@@ -24,7 +22,6 @@ client.on('ready', () => {
     client.user.setActivity('Saut Manurung Server',{
         type: "LISTENING"
     }).catch(console.error);
-
 });
 
 client.on('guildMemberAdd', async member =>{
@@ -72,6 +69,9 @@ client.on('message', msg => {
             break;
         case "promo":
             commands.get('promo').execute(msg,args);
+            break;
+        case "setRole":
+            commands.get('setRole').execute(msg);
             break;
     }
 });
