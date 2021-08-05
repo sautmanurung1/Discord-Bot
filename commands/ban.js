@@ -23,6 +23,7 @@ module.exports = {
                 } else{
                     msg.reply('Silahkan mention member yang ingin di banned');
                 }
+                
             }
     }
 }
