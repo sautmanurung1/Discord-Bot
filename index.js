@@ -5,10 +5,9 @@ const client = new Client();
 
 
 const PREFIX = '!';
-
+let promo;
 
 const fs = require ('fs')
-const cooldown = new Collection();
 
 const commands = new Collection();
 const files = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
@@ -70,6 +69,9 @@ client.on('message', msg => {
             break;
         case "ban":
             commands.get('ban').execute(msg);
+            break;
+        case "promo":
+            commands.get('promo').execute(msg,args);
             break;
     }
 });
