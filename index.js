@@ -5,7 +5,6 @@ const client = new Client();
 
 
 const PREFIX = '!';
-let promo;
 
 const fs = require ('fs')
 
