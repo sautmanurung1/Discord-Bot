@@ -43,7 +43,6 @@ client.on('message', msg => {
     if(msg.author.bot) return;
     if(!msg.content.startsWith(PREFIX)) return;
     let args = msg.content.substring(PREFIX.length).split(" ")
-
     switch (args[0]){
         case "ping":
             commands.get('ping').execute(msg);
