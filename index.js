@@ -1,13 +1,14 @@
-const {Client,
+const Discord = require('discord.js');
+const { Client,
     Collection
-    }= require('discord.js');
+    } = require('discord.js');
 const client = new Client();
 
 
 const PREFIX = '!';
-
-const fs = require ('fs')
-
+const fs = require ('fs');
+const { CanvasSenpai } = require('canvas-senpai')
+const canva = new CanvasSenpai();
 const commands = new Collection();
 const files = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 
@@ -28,12 +29,14 @@ client.on('ready', () => {
 
 });
 
-client.on('guildMemberAdd', member =>{
+client.on('guildMemberAdd', async member =>{
     const channel = member.guild.channels.cache.find(ch => ch.name === 'lobby');
+    let data = await canva.welcome(member, { link: "https://wallpapercave.com/wp/wp5128415.jpg" });
+    const attachment = new Discord.MessageAttachment(data, "welcome-image.png");
     const rule = member.guild.channels.cache.find(ch => ch.name === 'rule');
     if(!channel) return;
     if(member.guild.name === 'sautmanurung server'){
-        channel.send(`Halo ${member}, Selamat datang di server Discord Saut Manurung, silahkan baca terlebih dahulu peraturan di channel ${rule}`);
+        channel.send(`Halo ${member}, Selamat datang di server Discord Saut Manurung, silahkan baca terlebih dahulu peraturan di channel ${rule}`, attachment);
     }
 });
 
