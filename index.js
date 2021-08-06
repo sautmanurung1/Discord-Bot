@@ -29,7 +29,7 @@ client.on('guildMemberAdd', async member =>{
     const attachment = new Discord.MessageAttachment(data, "welcome-image.png");
     const rule = member.guild.channels.cache.find(ch => ch.name === 'rule');
     if(!channel) return;
-    if(member.guild.name === 'sautmanurung server'){
+    if(member.guild.id === '872717467246526464'){
         channel.send(`Halo ${member}, Selamat datang di server Discord Saut Manurung, silahkan baca terlebih dahulu peraturan di channel ${rule}`, attachment);
     }
 });
