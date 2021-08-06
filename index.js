@@ -1,11 +1,10 @@
-const { Client , Collection } = require('discord.js');
-const client = new Client();
 const Discord = require('discord.js')
+const client = new Discord.Client();
 const PREFIX = '!';
 const fs = require ('fs');
 const { CanvasSenpai } = require('canvas-senpai')
 const canva = new CanvasSenpai();
-const commands = new Collection();
+const commands = new Discord.Collection();
 const files = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 
 for(const file of files) {
