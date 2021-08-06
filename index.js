@@ -19,7 +19,7 @@ client.on('ready', () => {
     console.log('BOT ONLINE OM GANTENG');
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity('You can use this bot make $',{
-        type: "LISTENING"
+        type:"MAINTANCE"
     }).catch(console.error);
 });
 
