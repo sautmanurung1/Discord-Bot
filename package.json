@@ -4,8 +4,7 @@
   "description": "Buat Bot Discord Saut",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "node .": "node run index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
