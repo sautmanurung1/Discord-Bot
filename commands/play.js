@@ -3,7 +3,7 @@ const ytSearch = require('yt-search');
 
 const queue = new Map();
 module.exports = {
-    name: 'music',
+    name: 'play',
     description : 'Ini adalah command untuk menghidupkan music',
     execute(msg,args){
         const voice_channel = msg.member.voice.voice_channel;
@@ -19,8 +19,8 @@ module.exports = {
             let song = {};
 
 
-            if(ytdl.validateURL(args[2])){
-                const song_info = await ytdl.getInfo(args[2]);
+            if(ytdl.validateURL(args[1])){
+                const song_info = await ytdl.getInfo(args[1]);
                 song = { title : song_info.videoDetails.title, url : song_info.videoDetails.video_url };
             } else{
                 const video_finder = async(query) =>{
@@ -28,7 +28,7 @@ module.exports = {
                     return (videoResult.videos.length > 1) ? videoResult.videos[2] : null;
                 }
 
-                const video = await video_finder(args[2].join(' '));
+                const video = await video_finder(args.join(' '));
                 if(video){
                     song = { title : video.title, url: video.url}
                 } else{
@@ -74,7 +74,7 @@ const video_player = async(guild, song) => {
     song_queue.connection.play(stream, { seek : 0, volume: 0.5})
     .on('finish', ()=> {
         song_queue.songs.shift();
-        video_player(guild,song_queue.songs[2]);
+        video_player(guild,song_queue.songs[1]);
     });
     await song_queue.text_channel.send(`Now Playing :notes: **${song.title}**`)
 }

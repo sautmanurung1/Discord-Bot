@@ -74,7 +74,7 @@ client.on('message', msg => {
             commands.get('setRole').execute(msg);
             break;
         case "music":
-            commands.get('music').execute(msg, asny);
+            commands.get('play').execute(msg,args);
             break;
     }
 });
