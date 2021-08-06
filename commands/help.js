@@ -21,6 +21,7 @@ module.exports = {
             .addField('Promo', 'Command untuk menjalankan sebuah promo')
             .addField('setRole', 'Command untuk mensetting role dari pada user yang mau diatur')
             .addField('play','Command untuk memulai daripada music daripada bot')
+            .addField('leave','Command untk mengeluarkan bot daripada music kita')
             .setColor('05dfd7')
             .setFooter(botinfo.bot_name+ ' ' + botinfo.version);
             msg.channel.send(helpembed);

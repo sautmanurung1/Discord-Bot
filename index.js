@@ -76,6 +76,9 @@ client.on('message', msg => {
         case "play":
             commands.get('play').execute(msg,args);
             break;
+        case "leave":
+            commands.get('leave').execute(msg);
+            break;
     }
 });
 
