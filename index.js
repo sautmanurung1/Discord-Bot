@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const PREFIX = '$';
 const fs = require ('fs');
 const { CanvasSenpai } = require('canvas-senpai');
-const { execute } = require('./commands/Music');
+const { execute } = require('./commands/play');
 const canva = new CanvasSenpai();
 const commands = new Discord.Collection();
 const files = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
