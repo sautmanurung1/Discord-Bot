@@ -4,8 +4,11 @@ module.exports = {
     execute(msg, args){
         if(msg.member.roles.cache.find(r => r.name === 'normies')){
             const user = msg.mentions.users.first();
-            if(user){
-                if(args[1] === 'normies'){
+            if(!args[1]){
+                msg.reply('Salah memasukkan commands');
+            }
+            if(args[1] === 'normies'){
+                if(user){
                     const userSet = msg.guild.member(user);
                     if(userSet){
                         const role = msg.guild.roles.cache.find(r => r.name === 'normies');
