@@ -4,7 +4,12 @@
   "description": "Buat Bot Discord Saut",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "node .": "node run index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sautmanurung1/Discord-Bot"
   },
   "author": "Saut Manurung",
   "license": "ISC",
