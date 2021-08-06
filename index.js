@@ -2,7 +2,8 @@ const Discord = require('discord.js')
 const client = new Discord.Client();
 const PREFIX = '$';
 const fs = require ('fs');
-const { CanvasSenpai } = require('canvas-senpai')
+const { CanvasSenpai } = require('canvas-senpai');
+const { execute } = require('./commands/Music');
 const canva = new CanvasSenpai();
 const commands = new Discord.Collection();
 const files = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
@@ -71,6 +72,9 @@ client.on('message', msg => {
             break;
         case "setRole":
             commands.get('setRole').execute(msg);
+            break;
+        case "music":
+            commands.get('music').execute(msg, asny);
             break;
     }
 });

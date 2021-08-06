@@ -5,7 +5,7 @@ const queue = new Map();
 module.exports = {
     name: 'music',
     description : 'Ini adalah command untuk menghidupkan music',
-    async execute(msg,args){
+    execute(msg,args){
         const voice_channel = msg.member.voice.voice_channel;
         if(!voice_channel) return msg.channel.send('You need to be in a channel to execute this command!');
         const permissions = voice_channel.permissionsFor(msg.client.user);
