@@ -73,7 +73,7 @@ client.on('message', msg => {
         case "setRole":
             commands.get('setRole').execute(msg);
             break;
-        case "music":
+        case "play":
             commands.get('play').execute(msg,args);
             break;
     }
