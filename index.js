@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const client = new Discord.Client();
-const PREFIX = '-s';
+const PREFIX = '$';
 const fs = require ('fs');
 const { CanvasSenpai } = require('canvas-senpai')
 const canva = new CanvasSenpai();
@@ -18,7 +18,7 @@ if(process.env.NODE_ENV !=='production'){
 client.on('ready', () => {
     console.log('BOT ONLINE OM GANTENG');
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity('Saut Manurung Server',{
+    client.user.setActivity('754914449252548619',{
         type: "LISTENING"
     }).catch(console.error);
 });
