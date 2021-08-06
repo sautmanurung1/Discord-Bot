@@ -27,10 +27,10 @@ client.on('guildMemberAdd', async member =>{
     const channel = member.guild.channels.cache.find(ch => ch.name === 'lobby');
     let data = await canva.welcome(member, { link: "https://wallpapercave.com/wp/wp5128415.jpg" });
     const attachment = new Discord.MessageAttachment(data, "welcome-image.png");
-    const rule = member.guild.channels.cache.find(ch => ch.name === 'rule');
+    const rule = member.guild.channels.cache.find(ch => ch.name === 'rules');
     if(!channel) return;
-    if(member.guild.id === '872717467246526464'){
-        channel.send(`Halo ${member}, Selamat datang di server Discord Saut Manurung, silahkan baca terlebih dahulu peraturan di channel ${rule}`, attachment);
+    if(member.guild.id === '754914449252548619'){
+        channel.send(`Halo ${member}, Selamat datang di server Discord Super Winnie Hut Jr's, silahkan baca terlebih dahulu peraturan di channel ${rule}`, attachment);
     }
 });
 
