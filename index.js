@@ -18,8 +18,8 @@ if(process.env.NODE_ENV !=='production'){
 client.on('ready', () => {
     console.log('BOT ONLINE OM GANTENG');
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity('You can use this bot make $',{
-        type:"MAINTANCE"
+    client.user.setActivity('Nothing',{
+        type:"LISTENING"
     }).catch(console.error);
 });
 
