@@ -24,7 +24,7 @@ client.on('ready', () => {
 });
 
 client.on('guildMemberAdd', async member =>{
-    const channel = member.guild.channels.cache.find(ch => ch.name === 'lobby');
+    const channel = member.guild.channels.cache.find(ch => ch.name === 'general');
     let data = await canva.welcome(member, { link: "https://wallpapercave.com/wp/wp5128415.jpg" });
     const attachment = new Discord.MessageAttachment(data, "welcome-image.png");
     const rule = member.guild.channels.cache.find(ch => ch.name === 'rules');
