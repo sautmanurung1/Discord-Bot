@@ -19,6 +19,8 @@ module.exports = {
             .addField('kick', 'Command untuk mengkick user lain jika kalian itu seorang admin')
             .addField('ban', 'Command untuk membanned user lain jika kalian seorang admin')
             .addField('Promo', 'Command untuk menjalankan sebuah promo')
+            .addField('setRole', 'Command untuk mensetting role dari pada user yang mau diatur')
+            .addField('Music','Command untuk memulai daripada music daripada bot')
             .setColor('05dfd7')
             .setFooter(botinfo.bot_name+ ' ' + botinfo.version);
             msg.channel.send(helpembed);
