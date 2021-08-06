@@ -29,6 +29,7 @@ module.exports = {
                 .setDescription('Bot ini dibuat menggunakan bahasa pemrograman Node JS, dan bagi yang berkenan untuk mengembangkan bot ini dapat melihat di github saya')
                 .addField('Language : ', botinfo.bahasa, true)
                 .addField('Version : ', botinfo.version, true)
+                .addField('Deploy : ',botinfo.deploy, true )
                 .setFooter(botinfo.bot_name +' ' + botinfo.version)
                 .setColor('0F52BA');
                 msg.channel.send(botInfor)

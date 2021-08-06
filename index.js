@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const client = new Discord.Client();
-const PREFIX = '!';
+const PREFIX = '-s';
 const fs = require ('fs');
 const { CanvasSenpai } = require('canvas-senpai')
 const canva = new CanvasSenpai();
