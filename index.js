@@ -7,15 +7,14 @@ const { execute } = require('./commands/play');
 const canva = new CanvasSenpai();
 const commands = new Discord.Collection();
 const files = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
-
+const { TOKEN } = require('./config.json')
+const keepAlive = require('./server.js');
+keepAlive();
 for(const file of files) {
     const command = require(`./commands/${file}`)
     commands.set(command.name, command)
 }
 
-if(process.env.NODE_ENV !=='production'){
-    require('dotenv').config()
-}
 client.on('ready', () => {
     console.log('BOT ONLINE OM GANTENG');
     console.log(`Logged in as ${client.user.tag}!`);
@@ -82,4 +81,5 @@ client.on('message', msg => {
     }
 });
 
-client.login(process.env.API_TOKEN);
+client.login(TOKEN);
+process.on('unhandledRejection', console.error);
