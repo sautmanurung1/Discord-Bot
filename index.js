@@ -7,9 +7,6 @@ const { execute } = require('./commands/play');
 const canva = new CanvasSenpai();
 const commands = new Discord.Collection();
 const files = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
-const { TOKEN } = require('./config.json')
-const keepAlive = require('./server.js');
-keepAlive();
 for(const file of files) {
     const command = require(`./commands/${file}`)
     commands.set(command.name, command)
@@ -81,5 +78,5 @@ client.on('message', msg => {
     }
 });
 
-client.login(TOKEN);
+client.login(prosess.env.TOKEN);
 process.on('unhandledRejection', console.error);
