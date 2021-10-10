@@ -6,6 +6,7 @@ const { CanvasSenpai } = require('canvas-senpai');
 const { execute } = require('./commands/play');
 const canva = new CanvasSenpai();
 const commands = new Discord.Collection();
+const { token } = require ('./config.json')
 const files = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 for(const file of files) {
     const command = require(`./commands/${file}`)
@@ -78,5 +79,5 @@ client.on('message', msg => {
     }
 });
 
-client.login(prosess.env.TOKEN);
+client.login(token);
 process.on('unhandledRejection', console.error);
