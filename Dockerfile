@@ -1,9 +1,9 @@
 FROM node:16
-RUN mkdir -p /src/user/app
-WORKDIR /src/user/app
-RUN npm install
+WORKDIR /app
 COPY package*.json ./
+
+RUN npm install
 COPY . .
-RUN npm install --production
+
+CMD [ "node", "index.js" ]
 EXPOSE 8080
-CMD ["npm", "start"]
