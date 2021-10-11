@@ -1,9 +1,8 @@
 FROM node:16
-WORKDIR /app
-COPY package*.json ./
-
-RUN npm install
+RUN mkdir -p /src/user/app
+WORKDIR /src/user/app
 COPY . .
-
-CMD [ "node", "index.js" ]
-EXPOSE 3000
+RUN npm install -g npm
+RUN npm install --production
+EXPOSE 8080
+CMD ["npm", "start"]
