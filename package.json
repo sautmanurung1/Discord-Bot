@@ -15,7 +15,7 @@
   "dependencies": {
     "@discordjs/opus": "^0.6.0",
     "canvacord": "^5.2.3",
-    "canvas": "^2.8.0",
+    "canvas": "^2.9.1",
     "canvas-senpai": "^2.0.3",
     "discord.js": "^13.3.1",
     "dotenv": "^10.0.0",
