@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.6.0",
-    "canvacord": "^5.2.3",
+    "canvacord": "^5.4.0",
     "canvas": "^2.8.0",
     "canvas-senpai": "^2.0.3",
     "discord.js": "^13.3.1",
