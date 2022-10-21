@@ -13,7 +13,7 @@
   "author": "Saut Manurung",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.6.0",
+    "@discordjs/opus": "^0.9.0",
     "canvacord": "^5.2.3",
     "canvas": "^2.8.0",
     "canvas-senpai": "^2.0.3",
